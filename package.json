@@ -1,7 +1,7 @@
 {
-  "name": "template-sls",
+  "name": "sls-services-snippet",
   "version": "1.0.0",
-  "description": "Serverless Frameworkのテンプレート",
+  "description": "Serverless Frameworkでよく使うサービススニペット",
   "dependencies": {
     "serverless": "^2.70.0"
   },
