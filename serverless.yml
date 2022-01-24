@@ -1,4 +1,4 @@
-service: template-sls
+service: sls-services-snippet
 frameworkVersion: "2"
 provider:
   name: aws
@@ -17,8 +17,8 @@ provider:
       Resource:
         - "*"
 functions:
-  hello:
-    handler: src/handlers/handler.hello
+  setup_iam:
+    handler: src/handlers/setup_iam.handler
 custom:
   environment:
     dev:
@@ -27,6 +27,8 @@ custom:
       STAGE: ${self:provider.stage}
     prod:
       STAGE: ${self:provider.stage}
+  pythonRequirements:
+    usePipenv: true
   prune:
     automatic: true
     number: 3
@@ -34,7 +36,7 @@ plugins:
   - serverless-step-functions
   - serverless-python-requirements
   - serverless-prune-plugin
-stepFunctions: ${file(includes/state-machines.yml)}
+# stepFunctions: ${file(includes/state-machines.yml)}
 package:
   patterns:
     - "!./**"
