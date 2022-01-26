@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 boto3 = "*"
 requests = "*"
-boto3-stubs = {extras = ["iam"], version = "*"}
+boto3-stubs = {extras = ["config", "iam"], version = "*"}
 
 [dev-packages]
 isort = "*"
