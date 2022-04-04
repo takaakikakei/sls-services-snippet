@@ -17,9 +17,13 @@ var/
 *.egg
 .idea/
 __pycache__/
+.venv/
+.pytest_cache/
 
 # Serverless directories
 .serverless
 node_modules/
 
+.coverage
+htmlcov/
 .vscode/
