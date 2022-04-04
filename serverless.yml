@@ -44,5 +44,5 @@ plugins:
 # stepFunctions: ${file(includes/state-machines.yml)}
 package:
   patterns:
-    - "!./**"
+    - '!./**'
     - ./src/**/*.py
